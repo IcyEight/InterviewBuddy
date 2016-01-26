@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        
+        <title>InterviewBuddy - Game</title>
+
+          <!-- Bootstrap -->    
+          <link href="stylesheet.css" rel="stylesheet">
+          <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+          <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+		
+		
+		  <script LANGUAGE = "JavaScript">
+			  
+			  function getRadioCheckedValue(form)
+			  {
+   			  	var oRadio = document.form.track.value;
+              	for(var i = 0; i < oRadio.length; i++){
+              	if(oRadio[i].checked){
+         	  	return oRadio[i].value;
+			  }
+			  }
+				return '';
+			  }
+		</script>
+		
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+
+          <ul class="navigation">
+			<li><a href="home.html">Home</a></li>
+	        <li><a href="InterviewBuddy_Game.html"><span style="color:#CC0066; font-weight: 800;">Game</a></li>
+          </ul>
+
+    <div class>
+        <form action="#" class="#" method="#" name="pet">
+			<script>
+				var trackSelection = ""
+			</script>
+			
+			<input type="radio" checked name="track" id="a"/>
+			Computer Science Track
+			<br/>
+			
+			<input type="radio" name="track" id="b"/>
+			Business Case Track
+			<br/>
+			
+			<input type="radio" name="track" id="c"/>
+			Combination
+			<br/>
+			
+            <p>
+    			<select name='duration'>
+    				<option selected value="30">30 seconds</option>
+    				<option value="300">5 minutes</option>
+    				<option value="600">10 minutes</option>
+    				<option value="900">15 minutes</option>
+    				<option value="1800">30 minutes</option>
+    				<option value="3600">1 hour</option>
+    			</select>
+    		</p>
+			
+			<p>
+			<input type="button" id="buttonId" value="Start"/>
+			<script>
+				document.getElementById('buttonId').onclick = function(){
+					if(document.getElementById('a').checked) 
+						window.location.assign("csquestion.html");
+					else if(document.getElementById('b').checked) 
+						window.location.href='bsquestion.html';			
+					else
+						window.location.href='combquestion.html';				
+					
+				}
+				</script>
+			<p>		
+			
+    	</form>
+
+        </div>
+    </div>
+  </body>
+</html>
+

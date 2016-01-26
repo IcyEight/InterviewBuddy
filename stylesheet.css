@@ -1,0 +1,171 @@
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  background: white;
+}
+
+p, p1, p2, a, h1, h2, h3, h4, li {
+  font-family: 'Karla', 'sans-serif';
+}
+
+p .test {
+  color: red;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+body {
+  margin: 0; 
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  min-height: 50vh;
+  padding-left: 10%;
+  padding-right: 10%;
+  flex-direction: column;
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.home p {
+  font-size: 12 pt;
+  line-height: 18pt;
+  width: 40%;
+
+}
+
+.main {
+  text-align: left;
+/*  padding-top: 5%;*/
+  color: black;
+  flex: 1;
+/*  position: relative;*/
+}
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  /*background: #103f4d;*/
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  /*justify-content: center;*/
+}
+
+a {
+  text-decoration: none;
+   -o-transition:color .25s ease-out;
+    -ms-transition:color .25s ease-out;
+    -moz-transition:color .25s ease-out;
+    -webkit-transition:color .25s ease-out;
+    /* ...and now override with proper CSS property */
+    transition:color .25s ease-out;
+}
+
+.navigation li {
+  color: grey;
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 3em;
+  font-size: 16pt;
+  /*padding-left: 3em;*/
+  
+}
+
+.navigation li:nth-child(2) {
+  padding-left: 60px;
+}
+
+.navigation a {
+  color: grey;
+}
+
+.header {
+  font-family: 'Inconsolata', 'sans-serif';
+  text-align: center;
+  font-size: 16pt;
+  padding-top: 18px;
+}
+
+.footer {
+    padding-top: 10px;
+    width: 100%;
+}
+
+/*WORK.HTML*/
+.project {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: left;
+
+   flex: 1 auto;
+   flex-direction: row; 
+
+
+  /*z-index: 100;
+  position: absolute; 
+  opacity: 0.3;
+  margin-left: 60%;
+  margin-top: 5%;*/
+}
+
+.project a:visited {
+  color: #333333;
+}
+
+.work-post {
+  display: inline-block;
+  float: left;
+
+}
+
+.work-post: nth-child(2) {
+  padding-left: 50px;
+
+}
+
+.work-post h2 {
+  color: #00994C;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: -20px;
+}
+
+.work-post h3 {
+  color: #BBBBBB;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 30px;
+}
+
+/*WORK END*/

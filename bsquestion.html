@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <title>Testing</title>
+
+    <link href="stylesheet.css" rel="stylesheet">
+    <link href="script.js" rel="script">
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+            function countDown(secs, elem) {
+                var element = document.getElementById(elem)
+                element.innerHTML = "Time left: " + secs + " seconds";
+                if(secs < 1) {
+                    clearTimeout(timer);
+                    window.location.href='home.html';
+                }
+                secs--;
+                var timer = setTimeout('countDown('+secs+', "'+elem+'")',1000);
+            }
+		
+    </script>
+
+  </head>
+
+  <body>
+	  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+	
+	  <div class="wrapper">
+
+          <ul class="navigation">
+			<li><a href="home.html">Home</a></li>
+	        <li><a href="InterviewBuddy_game.html"><span style="color:#CC0066; font-weight: 800;">Game</a></li>
+          </ul>
+
+        <h1>Business Case Track</h1>
+		  	
+          <form>
+			  
+			   
+			    
+			   <h1 type="text" id="que"> yolo </h1>
+								
+				<!-- <p id="demo"></p>-->
+			<script>
+					var ques = ["The number of Wi-Fi hot spots in the U.S. last year numbered 72,000; up 60% from the year before. How many Wi-Fi hotspots were there the year before?", 
+								"LG Electronics is an air conditioning company that sells a line of 20 different models with an average retail price of $800. If none of their products sell for less than $300, and exactly 5 sell for less than $600, what is the greatest possible selling price for their most expensive air conditioning product?", 
+								"As the real estate housing market cools, some listing Realty companies are offering the buyer a 75% rebate on the commission that they paid. The real estate commission is usually 6% of the purchase price and is split between the listing broker and the selling broker. Thus, the buyer would get 75% of the 3% back. How much would a buyer get back if the bought an $800,000 house?",
+								 "If 10 gallons of orange juice are added to 40 gallons of a mixture that is 10 percent orange juice, then what percent of the resulting mixture is orange juice?",
+								"This year the full-time MBA class at Northwestern University Kellogg School of Management has a total of 581 students. If the ratio of girls to boys in the class is 3:4, how many more boys than girls are in the class?"];
+				// this.value = document.getElementById("que").innerHTML = ques[0];
+				var i = 1;	
+					
+				$("#que").text(ques[0])
+					//document.getElementById("que").value  = ques[0];
+				
+				function update()
+				{
+					if(i < ques.length)
+					{
+						$("#que").text(ques[i])
+						//document.getElementById("que").value  = ques[i];
+						i++;
+					}
+					else	
+					document.getElementById('Sbutton').disabled = true;
+				}
+				function clearContents(element) {
+  					element.value = '';
+				}
+				</script>
+				
+				</br>
+
+            <p>Enter response: </p>
+
+            <textarea rows="15" cols="70" id="textarea" onfocus="clearContents(this);"></textarea>
+		  
+			<!-- <input type="submit" value="Submit" id="Sbutton"><br><br> -->
+		
+		  <div onclick='update()'>
+		  <p> <input type="button" value="Next question" </p>
+		  </div>
+		  
+            </form>
+
+        <div id="status"></div>
+            <script type="text/javascript">countDown(30,"status");
+            </script>
+
+        </div>
+
+    </div>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js">
+
+
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <title>Testing</title>
+
+    <link href="stylesheet.css" rel="stylesheet">
+    <link href="script.js" rel="script">
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+            function countDown(secs, elem) {
+                var element = document.getElementById(elem)
+                element.innerHTML = "Time left: " + secs + " seconds";
+                if(secs < 1) {
+                    clearTimeout(timer);
+                    window.location.href='home.html';
+                }
+                secs--;
+                var timer = setTimeout('countDown('+secs+', "'+elem+'")',1000);
+            }
+		
+    </script>
+
+  </head>
+
+  <body>
+	  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+	
+	  <div class="wrapper">
+
+          <ul class="navigation">
+			<li><a href="home.html">Home</a></li>
+	        <li><a href="InterviewBuddy_game.html"><span style="color:#CC0066; font-weight: 800;">Game</a></li>
+          </ul>
+
+        <h1>Combination Track</h1>
+		  	
+          <form>
+			  
+			   
+			    
+			   <h1 type="text" id="que"> yolo </h1>
+								
+				<!-- <p id="demo"></p>-->
+			<script>
+					var ques = ["The number of Wi-Fi hot spots in the U.S. last year numbered 72,000; up 60% from the year before. How many Wi-Fi hotspots were there the year before?", 
+								"Find the shortest palindrome in a String.",
+								 "Print all permutations of a String.",
+								"Given a binary tree which is a sum tree (child nodes add to parent), write an algorithm to determine whether the tree is a valid sum tree",
+								"If 10 gallons of orange juice are added to 40 gallons of a mixture that is 10 percent orange juice, then what percent of the resulting mixture is orange juice?",
+								];
+				// this.value = document.getElementById("que").innerHTML = ques[0];
+				var i = 1;	
+					
+				$("#que").text(ques[0])
+					//document.getElementById("que").value  = ques[0];
+				
+				function update()
+				{
+					if(i < ques.length)
+					{
+						$("#que").text(ques[i])
+						//document.getElementById("que").value  = ques[i];
+						i++;
+					}
+					else	
+					document.getElementById('Sbutton').disabled = true;
+				}
+				function clearContents(element) {
+  					element.value = '';
+				}
+				</script>
+				
+				</br>
+
+            <p>Enter response: </p>
+
+            <textarea rows="15" cols="70" id="textarea" onfocus="clearContents(this);"></textarea>
+		  
+			<!-- <input type="submit" value="Submit" id="Sbutton"><br><br> -->
+		
+		  <div onclick='update()'>
+		  <p> <input type="button" value="Next question" </p>
+		  </div>
+		  
+            </form>
+
+        <div id="status"></div>
+            <script type="text/javascript">countDown(30,"status");
+            </script>
+
+        </div>
+
+    </div>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js">
+
+
+    </script>
+
+  </body>
+
+</html>
